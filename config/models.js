@@ -70,6 +70,16 @@ module.exports.models = {
 
   attributes: {
     id: { type: 'string', columnName: '_id' },
+    createdAt: {
+          type: 'string',
+          columnType: 'datetime',
+          autoCreatedAt: true,
+        },
+    updatedAt: {
+      type: 'string',
+      columnType: 'datetime',
+      autoUpdatedAt: true,
+    },
     //--------------------------------------------------------------------------
     //  /\   Using MongoDB?
     //  ||   Replace `id` above with this instead:
