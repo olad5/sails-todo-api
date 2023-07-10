@@ -47,6 +47,8 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     default: {
+      adapter: 'sails-mongo',
+      url: process.env.DATABASE_URL,
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
       //--------------------------------------------------------------------------
@@ -270,6 +272,9 @@ module.exports = {
     //   'https://staging.example.com',
     // ],
 
+    onlyAllowOrigins: [
+      process.env.APP_URL,
+    ],
 
     /***************************************************************************
     *                                                                          *
@@ -340,7 +345,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
